@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Asmeta">
+      Asmeta update site
+   </description>
+   <feature url="features/org.asmeta.simulator.feature_0.9.11.jar" id="org.asmeta.simulator.feature" version="0.9.11">
+      <category name="Asmeta"/>
+   </feature>
+   <feature url="features/org.asmeta.xt.feature_0.0.5.1.jar" id="org.asmeta.xt.feature" version="0.0.5.1">
+      <category name="Asmeta"/>
+   </feature>
+   <category-def name="Asmeta" label="Asmeta: Abstract State Machine Framework"/>
+</site>
