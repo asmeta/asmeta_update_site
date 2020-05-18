@@ -15,7 +15,9 @@ cd temp
 
 # install the plugins
 cd eclipse
-ls ../../../asmeta_update_site
-./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository file://$updatesite  -installIU Asmeta
+#
+#./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository file://$updatesite  -installIU Asmeta
+./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository file:/home/garganti/progettiDaSVN/asmeta/asmeta_update_site  -installIU Asmeta
+
 # delete temp
 #rm -rf temp
