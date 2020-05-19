@@ -18,5 +18,8 @@
    <feature url="features/org.asmeta.xt.feature_0.0.5.1.jar" id="org.asmeta.xt.feature" version="0.0.5.1">
       <category name="Asmeta"/>
    </feature>
+   <feature url="features/org.asmeta.validator.feature_1.0.10.jar" id="org.asmeta.validator.feature" version="1.0.10">
+      <category name="Asmeta"/>
+   </feature>
    <category-def name="Asmeta" label="Asmeta: Abstract State Machine Framework"/>
 </site>
