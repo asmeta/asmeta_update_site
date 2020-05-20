@@ -8,10 +8,12 @@ updatesite=$(pwd)
 cd temp
 # first download eclipse
 # use he mirror service, skip if it alredy exits 
-#wget --no-clobber http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2020-03/R/eclipse-java-2020-03-R-win32-x86_64.zip
+wget --no-clobber http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2020-03/R/eclipse-java-2020-03-R-win32-x86_64.zip
 
-#unzip it
-#unzip eclipse-java-2020-03-R-win32-x86_64.zip
+# remove old eclipse
+rm -rf eclipse
+#unzip the new one
+unzip eclipse-java-2020-03-R-win32-x86_64.zip
 
 # install the plugins
 cd eclipse
