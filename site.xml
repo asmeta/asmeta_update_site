@@ -27,7 +27,7 @@
    <feature url="features/org.asmeta.visualizer.feature_1.0.8.jar" id="org.asmeta.visualizer.feature" version="1.0.8">
       <category name="Asmeta"/>
    </feature>
-   <feature url="features/org.asmeta.avallaxt.feature_1.0.0.202005201620.jar" id="org.asmeta.avallaxt.feature" version="1.0.0.202005201620">
+   <feature url="features/org.asmeta.avallaxt.feature_1.0.0.202006121459.jar" id="org.asmeta.avallaxt.feature" version="1.0.0.202006121459">
       <category name="Asmeta"/>
    </feature>
    <category-def name="Asmeta" label="Asmeta: Abstract State Machine Framework"/>
