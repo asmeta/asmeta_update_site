@@ -9,13 +9,7 @@
    <feature url="features/org.asmeta.asmetasmv.feature_1.0.6.jar" id="org.asmeta.asmetasmv.feature" version="1.0.6">
       <category name="Asmeta"/>
    </feature>
-   <feature url="features/org.asmeta.simulator.feature_0.9.11.jar" id="org.asmeta.simulator.feature" version="0.9.11">
-      <category name="Asmeta"/>
-   </feature>
    <feature url="features/org.asmeta.xt.feature_0.0.5.1.jar" id="org.asmeta.xt.feature" version="0.0.5.1">
-      <category name="Asmeta"/>
-   </feature>
-   <feature url="features/org.asmeta.validator.feature_1.0.10.jar" id="org.asmeta.validator.feature" version="1.0.10">
       <category name="Asmeta"/>
    </feature>
    <feature url="features/org.asmeta.atgt.feature_0.0.3.jar" id="org.asmeta.atgt.feature" version="0.0.3">
@@ -24,10 +18,13 @@
    <feature url="features/org.asmeta.visualizer.feature_1.0.8.jar" id="org.asmeta.visualizer.feature" version="1.0.8">
       <category name="Asmeta"/>
    </feature>
-   <feature url="features/org.asmeta.avallaxt.feature_1.0.0.202006121459.jar" id="org.asmeta.avallaxt.feature" version="1.0.0.202006121459">
+   <feature url="features/org.asmeta.animator.feature_0.0.11.jar" id="org.asmeta.animator.feature" version="0.0.11">
       <category name="Asmeta"/>
    </feature>
-   <feature url="features/org.asmeta.animator.feature_0.0.11.jar" id="org.asmeta.animator.feature" version="0.0.11">
+   <feature url="features/org.asmeta.simulator.feature_0.9.12.jar" id="org.asmeta.simulator.feature" version="0.9.12">
+      <category name="Asmeta"/>
+   </feature>
+   <feature url="features/org.asmeta.validator.feature_1.0.11.jar" id="org.asmeta.validator.feature" version="1.0.11">
       <category name="Asmeta"/>
    </feature>
    <category-def name="Asmeta" label="Asmeta: Abstract State Machine Framework"/>
