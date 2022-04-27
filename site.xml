@@ -3,31 +3,31 @@
    <description name="Asmeta">
       Asmeta update site
    </description>
-   <feature url="features/org.asmeta.animator.feature_21.6.0.jar" id="org.asmeta.animator.feature" version="21.06">
+   <feature url="features/org.asmeta.animator.feature_21.6.0.jar" id="org.asmeta.animator.feature" version="22.04">
       <category name="Asmeta"/>
    </feature>
-   <feature url="features/org.asmeta.asmetama.feature_21.6.0.jar" id="org.asmeta.asmetama.feature" version="21.06">
+   <feature url="features/org.asmeta.asmetama.feature_21.6.0.jar" id="org.asmeta.asmetama.feature" version="22.04">
       <category name="Asmeta"/>
    </feature>
-   <feature url="features/org.asmeta.asmetasmv.feature_21.6.0.jar" id="org.asmeta.asmetasmv.feature" version="21.06">
+   <feature url="features/org.asmeta.asmetasmv.feature_21.6.0.jar" id="org.asmeta.asmetasmv.feature" version="22.04">
       <category name="Asmeta"/>
    </feature>
-   <feature url="features/org.asmeta.atgt.feature_21.6.0.jar" id="org.asmeta.atgt.feature" version="21.06">
+   <feature url="features/org.asmeta.atgt.feature_21.6.0.jar" id="org.asmeta.atgt.feature" version="22.04">
       <category name="Asmeta"/>
    </feature>
-   <feature url="features/org.asmeta.avallaxt.feature_21.6.0.jar" id="org.asmeta.avallaxt.feature" version="21.06">
+   <feature url="features/org.asmeta.avallaxt.feature_21.6.0.jar" id="org.asmeta.avallaxt.feature" version="22.04">
       <category name="Asmeta"/>
    </feature>
-   <feature url="features/org.asmeta.simulator.feature_21.6.0.jar" id="org.asmeta.simulator.feature" version="21.06">
+   <feature url="features/org.asmeta.simulator.feature_21.6.0.jar" id="org.asmeta.simulator.feature" version="22.04">
       <category name="Asmeta"/>
    </feature>
-   <feature url="features/org.asmeta.validator.feature_21.6.0.jar" id="org.asmeta.validator.feature" version="21.06">
+   <feature url="features/org.asmeta.validator.feature_21.6.0.jar" id="org.asmeta.validator.feature" version="22.04">
       <category name="Asmeta"/>
    </feature>
-   <feature url="features/org.asmeta.visualizer.feature_21.6.0.jar" id="org.asmeta.visualizer.feature" version="21.06">
+   <feature url="features/org.asmeta.visualizer.feature_21.6.0.jar" id="org.asmeta.visualizer.feature" version="22.04">
       <category name="Asmeta"/>
    </feature>
-   <feature url="features/org.asmeta.xt.feature_21.6.0.jar" id="org.asmeta.xt.feature" version="21.06">
+   <feature url="features/org.asmeta.xt.feature_21.6.0.jar" id="org.asmeta.xt.feature" version="22.04">
       <category name="Asmeta"/>
    </feature>
    <category-def name="Asmeta" label="Asmeta: Abstract State Machine Framework"/>
