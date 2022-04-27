@@ -8,7 +8,7 @@ echo "$updatesite"
 #mkdir temp
 cd temp
 # first download eclipse
-# use he mirror service, skip if it alredy exits 
+# use he mirror service, skip if it alredy exists 
 wget --no-clobber http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2022-03/R/eclipse-java-2022-03-R-win32-x86_64.zip
 
 # test with a fresh installation
@@ -22,13 +22,18 @@ mv eclipse eclipse_fresh
 # install the plugins
 cd eclipse_fresh
 #
-#./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository file://$updatesite  -installIU Asmeta
-# ./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository file:/home/garganti/progettiDaSVN/asmeta/asmeta_update_site  -installIU Asmeta
-# 
 # this is to test the local update site
+#questo non funziona perchè LTS prende un path diverso
+#./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository file://$updatesite  -installIU Asmeta
+# questo non va perchè il path lo interpreta male
+# ./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository file:/home/garganti/progettiDaSVN/asmeta/asmeta_update_site  -installIU Asmeta
+# questo sul fisso dell'ufficio
 ./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://download.eclipse.org/releases/latest,file:/D:\\AgHome\\progettidaSVNGIT\\asmeta\\asmeta_update_site -installIU Asmeta
+# questo da casa
+#./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://download.eclipse.org/releases/latest,file:/D:\\AgDocuments\\progettiDaSVN\\asmeta\\asmeta_update_site -installIU Asmeta
+#
 # this is to test the official update site
-#./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://raw.githubusercontent.com/asmeta/asmeta_update_site/master,https://download.eclipse.org/releases/latest -installIU Asmeta
+./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://raw.githubusercontent.com/asmeta/asmeta_update_site/master,https://download.eclipse.org/releases/latest -installIU Asmeta
 
 cd ..
 
