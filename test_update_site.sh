@@ -4,33 +4,37 @@
 updatesite=$(pwd)
 echo "$updatesite" 
 
+eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2022-09/R/
+
+eclipsezip=eclipse-java-2022-09-R-win32-x86_64.zip
+
 # make a remp dir
 #mkdir temp
 cd temp
 # first download eclipse
 # use he mirror service, skip if it already exists 
-wget --no-clobber http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2022-03/R/eclipse-java-2022-03-R-win32-x86_64.zip
+wget --no-clobber ${eclipseurldir}${eclipsezip}
 
 # test with a fresh installation
 #
 # remove old eclipse
 rm -rf eclipse_fresh
 #unzip the new one
-unzip eclipse-java-2022-03-R-win32-x86_64.zip
+unzip ${eclipsezip}
 mv eclipse eclipse_fresh
 
 # install the plugins
 cd eclipse_fresh
 #
 # this is to test the local update site
-# questo non funziona perchè LTS prende un path diverso e la variabile non punta a directory corretta.
+# questo non funziona perchï¿½ LTS prende un path diverso e la variabile non punta a directory corretta.
 #./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository file://$updatesite  -installIU Asmeta
-# questo non va perchè il path lo interpreta male
+# questo non va perchï¿½ il path lo interpreta male
 # ./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository file:/home/garganti/progettiDaSVN/asmeta/asmeta_update_site  -installIU Asmeta
 # questo sul fisso dell'ufficio
-./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://download.eclipse.org/releases/latest,file:/D:\\AgHome\\progettidaSVNGIT\\asmeta\\asmeta_update_site -installIU Asmeta
+#./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://download.eclipse.org/releases/latest,file:/D:\\AgHome\\progettidaSVNGIT\\asmeta\\asmeta_update_site -installIU Asmeta
 # questo da casa
-#./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://download.eclipse.org/releases/latest,file:/D:\\AgDocuments\\progettiDaSVN\\asmeta\\asmeta_update_site -installIU Asmeta
+./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://download.eclipse.org/releases/latest,file:/D:\\AgDocuments\\progettiDaSVN\\asmeta\\asmeta_update_site -installIU Asmeta
 #
 # this is to test the official update site
 # ./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://raw.githubusercontent.com/asmeta/asmeta_update_site/master,https://download.eclipse.org/releases/latest -installIU Asmeta
