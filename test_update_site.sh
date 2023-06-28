@@ -4,9 +4,9 @@
 updatesite=$(pwd)
 echo "$updatesite" 
 
-eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2023-03/R/
+eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2023-06/R/
 
-eclipsezip=eclipse-java-2023-03-R-win32-x86_64.zip
+eclipsezip=eclipse-java-2023-06-R-win32-x86_64.zip
 
 # make a temp dir
 #mkdir temp
