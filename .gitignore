@@ -1,2 +1,4 @@
 /temp/
 .DS_Store
+.settings/org.eclipse.core.resources.prefs
+logs.zip
