@@ -4,9 +4,9 @@
 updatesite=$(pwd)
 echo "$updatesite" 
 
-eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2023-06/R/
+eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2023-12/R/
 
-eclipsezip=eclipse-java-2023-06-R-win32-x86_64.zip
+eclipsezip=eclipse-java-2023-12-R-win32-x86_64.zip
 
 # make a temp dir
 #mkdir temp
@@ -18,9 +18,9 @@ wget --no-clobber ${eclipseurldir}${eclipsezip}
 # test with a fresh installation
 #
 # remove old eclipse
-# rm -rf eclipse_fresh
+rm -rf eclipse_fresh
 # unzip the new one
-# unzip ${eclipsezip}
+unzip ${eclipsezip}
 # 
 mv eclipse eclipse_fresh
 
