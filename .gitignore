@@ -2,3 +2,5 @@
 .DS_Store
 .settings/org.eclipse.core.resources.prefs
 logs.zip
+.settings/org.sonarlint.eclipse.core.prefs
+logs.zip
