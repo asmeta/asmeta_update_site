@@ -20,7 +20,7 @@ Features:
 ### how to build
 1. clean -> clean all the plugins and otehr files
 2. build in eclipse all the features and the updates site
-3. test -> download eclispe and install the latest plugin (from disk)
+3. test -> download eclispe and install the latest plugin (from disk)  in directory test .. eclipse_fresh is the lates attempt
 4. copy the eclipse in the dist directory (with nusmv) . the zip will be the distribution
 
 
