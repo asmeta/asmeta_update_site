@@ -4,15 +4,9 @@
 updatesite=$(pwd)
 echo "$updatesite" 
 
-<<<<<<< Updated upstream
-eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2023-12/R/
+eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2024-06/R/
 
-eclipsezip=eclipse-java-2023-12-R-win32-x86_64.zip
-=======
-eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2024-03/R/
-
-eclipsezip=eclipse-java-2024-03-R-win32-x86_64.zip
->>>>>>> Stashed changes
+eclipsezip=eclipse-java-2024-06-R-win32-x86_64.zip
 
 # make a temp dir
 #mkdir temp
@@ -23,15 +17,20 @@ wget --no-clobber ${eclipseurldir}${eclipsezip}
 
 # test with a fresh installation
 #
-# remove old eclipse
-rm -rf eclipse_fresh
+# remove old eclipse (it may contain asmeta)
+OLD_ECL=eclipse_fresh
+if [ -d "$OLD_ECL" ]; then
+    printf '%s\n' "Removing existings eclipse ($OLD_ECL)"
+    rm -rf "$OLD_ECL"
+fi
+
 # unzip the new one
 unzip ${eclipsezip}
 # 
-mv eclipse eclipse_fresh
+mv eclipse $OLD_ECL
 
 # install the plugins
-cd eclipse_fresh
+cd $OLD_ECL
 #
 # this is to test the local update site
 # questo non funziona perch� LTS prende un path diverso e la variabile non punta a directory corretta.
