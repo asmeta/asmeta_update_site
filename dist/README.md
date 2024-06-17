@@ -5,7 +5,9 @@ This document contains the steps to be followed to reproduce the tutorial’s cl
 
 ## Software installation -> DA SISTEMARE DOPO AVER CARICATO SU ZENODO
 Step 1: Download the artifact available [here](https://foselab.unibg.it/asmeta/eclipse_asmeta_smv_2024_06_multios.zip)
+
 Step 2: Unzip the content
+
 Step 3: Run the file in the main folder depending on your OS 
 
 
