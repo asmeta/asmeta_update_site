@@ -3,13 +3,30 @@
 
 This document contains the steps to be followed to reproduce the tutorial’s claims.
 
-## Software installation -> DA SISTEMARE DOPO AVER CARICATO SU ZENODO
-Step 1: Download the artifact available [here](https://foselab.unibg.it/asmeta/eclipse_asmeta_smv_2024_06_multios.zip)
+## Software installation
+Step 1: Download the .zip file containing the Asmeta tools available [here](https://zenodo.org/records/11955939) depending on your system:
+
+* [eclipse_asmeta_smv_2024_06_win64.zip](https://zenodo.org/records/11955939/files/eclipse_asmeta_smv_2024_06_win64.zip?download=1) 
+* [eclipse_asmeta_smv_2024_06_linux_x86_64.zip](https://zenodo.org/records/11955939/files/eclipse_asmeta_smv_2024_06_linux_x86_64.zip?download=1) 
+* [eclipse_asmeta_smv_2024_06_macOs_aarch64.zip](https://zenodo.org/records/11955939/files/eclipse_asmeta_smv_2024_06_macOs_aarch64.zip?download=1) 
 
 Step 2: Unzip the content
 
-Step 3: Run the file in the main folder depending on your OS 
+Step 3: Run the file in the main folder depending on your OS:
+
+* win64: *asmeta_win64.bat*
+* linux_x86_64: *asmeta_linux64.sh*
+* macOs_aarch64: *asmeta_macOs_install.sh* and *asmeta_macOs_run.sh*
+
+Eclipse is now running and in the workspace there are two projects:
+* *STDL* containing the Asmeta libraries
+* *tutorial_FM24* containing the Asmeta models of the Pill-Box Case Study
+
+For other platforms, instead, we provide an update site that can be used to install all the required plugins in any Eclipse version. Then the projects *STDL* and *tutorial_FM24* can be downloaded and imported in Eclipse from [here](https://github.com/asmeta/asmeta/tree/master/asmeta_models).
 
 
+In the following, we will explain the steps to use the Asmeta tools on the *pillbox_ground.asm* model.
 
+## Model Simulation
 
+Step 4: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification iteratively using the 
