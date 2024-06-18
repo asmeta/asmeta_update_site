@@ -29,14 +29,82 @@ In the following, we will explain the steps to use the Asmeta tools on the *pill
 
 ## Model Simulation
 
-Step 4: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification iteratively in the console using ![run_asmeta_model](images/run_asm_tool.png) button.
+Step 1: Uncheck the following two options in "Window -> Preferences -> Asmeta -> Simulator":
+
+* Stop simulation if the update set is empty
+* Stop simulation if the update set is trivial
+
+Step 2: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification iteratively in the console using ![run_asmeta_model](images/run_asm_tool.png) button.
 
 Let's assume that we want to simulate the scenario in Fig. 5 of the paper: *the pill in drawer 1 hits the deadline (in State 0), so the pill becomes to be taken (State 1), the led becomes ON (State 2), the user takes the pill, and the led becomes OFF (State 3)*.
-The set of inputs (monitored functions) is the following:
+In the following are listed the current state, the **inputs to be set** in the console, and the updated functions.
+
 * State 0:
+
+  Current state:
+     * drawerLed(drawer1) = OFF
+     * drawerLed(drawer2) = OFF
+     * drawerLed(drawer3) = OFF
+     * isPillTobeTaken(drawer1) = true
+     * isPillTobeTaken(drawer2) = false
+     * isPillTobeTaken(drawer3) = false
+
+  Inputs (monitored functions):
   * pillDeadlineHit(drawer1) = true
   * pillDeadlineHit(drawer2) = false
   * pillDeadlineHit(drawer3) = false
  
-  ## Togliere empty update set/trivial
+  Update set:
+  * isPillTobeTaken(drawer1)=true
+ 
+ * State 1:
+
+   Current state:
+   * drawerLed(drawer1) = OFF
+   * drawerLed(drawer2) = OFF
+   * drawerLed(drawer3) = OFF
+   * isPillTobeTaken(drawer1) = true
+   * isPillTobeTaken(drawer2) = false
+   * isPillTobeTaken(drawer3) = false
+    
+   Inputs (monitored functions):
+   * pillDeadlineHit(drawer1) = false
+   * pillDeadlineHit(drawer2) = false
+   * pillDeadlineHit(drawer3) = false
+ 
+   Update set:
+    * drawerLed(drawer1) = ON
+
+* State 2:
+
+  Current state:
+   * drawerLed(drawer1) = ON
+   * drawerLed(drawer2) = OFF
+   * drawerLed(drawer3) = OFF
+   * isPillTobeTaken(drawer1) = true
+   * isPillTobeTaken(drawer2) = false
+   * isPillTobeTaken(drawer3) = false
+     
+  Inputs (monitored functions):
+  * pillDeadlineHit(drawer1) = false
+  * pillDeadlineHit(drawer2) = false
+  * pillDeadlineHit(drawer3) = false
+  * isPillTaken(drawer1) = true
+
+  Update set:
+   * isPillTobeTaken(drawer1) = false
+   * drawerLed(drawer1) = OFF
+
+ * State 3:
+   
+   Current state:
+   * drawerLed(drawer1)=OFF
+   * drawerLed(drawer2)=OFF
+   * drawerLed(drawer3)=OFF
+   * isPillTobeTaken(drawer1)=false
+   * isPillTobeTaken(drawer2)=false
+   * isPillTobeTaken(drawer3)=false
+  
+
+## Model Animation     
 
