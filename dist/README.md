@@ -29,4 +29,14 @@ In the following, we will explain the steps to use the Asmeta tools on the *pill
 
 ## Model Simulation
 
-Step 4: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification iteratively using the 
+Step 4: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification iteratively in the console using ![run_asmeta_model](images/run_asm_tool.png) button.
+
+Let's assume that we want to simulate the scenario in Fig. 5 of the paper: *the pill in drawer 1 hits the deadline (in State 0), so the pill becomes to be taken (State 1), the led becomes ON (State 2), the user takes the pill, and the led becomes OFF (State 3)*.
+The set of inputs (monitored functions) is the following:
+* State 0:
+  * pillDeadlineHit(drawer1) = true
+  * pillDeadlineHit(drawer2) = false
+  * pillDeadlineHit(drawer3) = false
+ 
+  ## Togliere empty update set/trivial
+
