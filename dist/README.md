@@ -41,12 +41,14 @@ In the following, we will explain the steps to use the Asmeta tools on the *pill
 * Stop simulation if the update set is empty
 * Stop simulation if the update set is trivial
 
-**Step 2**: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification iteratively in the console using ![run_asmeta_model](images/run_asm_tool.png) button.
+**Step 2**: Open the *pillbox_ground.asm* model in the Eclipse editor.
+
+**Step 3**: Run the specification iteratively in the console using ![run_asmeta_model](images/run_asm_tool.png) button.
 
 Let's assume that we want to simulate the scenario in Fig. 5 of the paper: *the pill in drawer 1 hits the deadline (in State 0), so the pill becomes to be taken (State 1), the led becomes ON (State 2), the user takes the pill, and the led becomes OFF (State 3)*.
 In the following are listed the current state, the **inputs to be set** in the console, and the updated functions.
 
-**Step 3**:  State 0
+**Step 4**:  State 0
 
   Current state:
   * drawerLed(drawer1) = OFF
@@ -64,7 +66,7 @@ In the following are listed the current state, the **inputs to be set** in the c
   Update set:
   * isPillTobeTaken(drawer1)=true
  
- **Step 4**: State 1
+ **Step 5**: State 1
 
    Current state:
    * drawerLed(drawer1) = OFF
@@ -82,7 +84,7 @@ In the following are listed the current state, the **inputs to be set** in the c
    Update set:
    * drawerLed(drawer1) = ON
 
-**Step 5**: State 2
+**Step 6**: State 2
 
   Current state:
   * drawerLed(drawer1) = ON
@@ -102,7 +104,7 @@ In the following are listed the current state, the **inputs to be set** in the c
    * isPillTobeTaken(drawer1) = false
    * drawerLed(drawer1) = OFF
 
- **Step 6**: State 3
+ **Step 7**: State 3
    
    Current state:
    * drawerLed(drawer1)=OFF
@@ -116,7 +118,9 @@ To simulate other scenarios use different inputs.
 
 ### Random Simulation
 
-**Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification randomly in the console using ![run_asmeta_model](images/run_rnd.png) button.
+**Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor.
+
+**Step 2**: Run the specification randomly in the console using ![run_asmeta_model](images/run_rnd.png) button.
 
 The inputs are randomly chosen, and the simulation is displayed in the console.
 
@@ -124,12 +128,14 @@ The inputs are randomly chosen, and the simulation is displayed in the console.
 
 ### Interactive Animation
 
-**Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification using the animator by pressing the ![run_asmeta_model](images/runAnimatorInt.png) button.
+**Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor.
+
+**Step 2**: Run the specification using the animator by pressing the ![run_asmeta_model](images/runAnimatorInt.png) button.
 
 Let's assume that we want to animate the scenario in Fig. 6 of the paper (which is the same as the simulation): *the pill in drawer 1 hits the deadline (in State 0), so the pill becomes to be taken (State 1), the led becomes ON (State 2), the user takes the pill, and the led becomes OFF (State 3)*.
 In the following are listed the **inputs to be set** in the windows that appear to acquire inputs.
 
-**Step 2**: State 0
+**Step 3**: State 0
 
   Current state:
   * drawerLed(drawer1) = OFF
@@ -144,7 +150,7 @@ In the following are listed the **inputs to be set** in the windows that appear 
   * pillDeadlineHit(drawer2) = false
   * pillDeadlineHit(drawer3) = false
 
-**Step 3**: State 1
+**Step 4**: State 1
 
  Current state:
    * drawerLed(drawer1) = OFF
@@ -159,7 +165,7 @@ In the following are listed the **inputs to be set** in the windows that appear 
    * pillDeadlineHit(drawer2) = false
    * pillDeadlineHit(drawer3) = false
 
- **Step 4**: State 2
+ **Step 5**: State 2
 
    Current state:
   * drawerLed(drawer1) = ON
@@ -175,7 +181,7 @@ In the following are listed the **inputs to be set** in the windows that appear 
   * pillDeadlineHit(drawer3) = false
   * isPillTaken(drawer1) = true
 
-**Step 5**: State 3
+**Step 6**: State 3
    
    Current state:
    * drawerLed(drawer1)=OFF
@@ -193,8 +199,38 @@ To animate other scenarios use different inputs.
 
 ### Random Animation
 
-**Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification using the animator by pressing the ![run_asmeta_model](images/runAnimatorInt.png) button.
+**Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor.
 
-**Step 2**: Press  *"Do random step/s"* button in the animator. The specification is executed with a random set of inputs.
+**Step 2**: Run the specification using the animator by pressing the ![run_asmeta_model](images/runAnimatorInt.png) button.
+
+**Step 3**: Press  *"Do random step/s"* button in the animator. The specification is executed with a random set of inputs.
 
 The specification can be animated randomly step by step or more steps can be automatically randomly executed by setting the number of steps in the text box under the inscription *Insert random step number*.
+
+
+## Scenario-based Validation: AsmetaV
+
+Let's assume that we want to validate the model using the scenario in Listing 2 of the paper: 
+
+*Initially, the Pill-Box has all the LEDs OFF, so no pill has to be taken. In the second step, we set the deadline for the pill in the first drawer as hit and, after the execution of a step, the scenario checks whether the pill has been marked as one of those to be taken. Then, after a new
+execution step, we check that the LED corresponding to the first drawer is ON.
+Finally, after the patient has taken the pill, the scenario verifies whether all the LEDs have been turned OFF.*
+
+### Scenario-based Validation 
+
+**Step 1**: Open the *scenario_ground.avalla* in the Eclipse editor.
+
+**Step 2**: Run the scenario-based validation by pressing the ![run_asmeta_scenario](images/run_scenario.png) button.
+The output of the scenario execution is displayed in the console, and all checks are passed: *"Validation terminated without errors"*.
+
+If a check violation occurs, it finishes with *"WARNING: some check failed"*. To test this change line 46 in the *scenario_ground.avalla* file by replacing *OFF* with *ON*.
+
+### Scenario-based Validation with Animator
+
+**Step 1**: Open the *scenario_ground.avalla* in the Eclipse editor.
+
+**Step 2**: Run the scenario-based validation by pressing the ![run_asmeta_scenario](images/run_scenarioA.png) button.
+The output of the scenario execution is displayed in the animator.
+
+**Step 3**: Press *"Do one interactive step"* button to run the scenario step by step.
+Press *"Do random step/s"* button and set the number of steps in the text box under the inscription *Insert random step number* to run automatically more than one step.
