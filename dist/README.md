@@ -234,3 +234,21 @@ The output of the scenario execution is displayed in the animator.
 
 **Step 3**: Press *"Do one interactive step"* button to run the scenario step by step.
 Press *"Do random step/s"* button and set the number of steps in the text box under the inscription *Insert random step number* to run automatically more than one step.
+
+## Model review: AsmetaMA
+
+**Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor.
+
+**Step 2**: Run the model review by pressing the ![run_asmeta_model](images/runMA.png) button.
+The output is displayed in the console.
+
+## Formal Verification Through Model Checking: AsmetaSMV
+
+**Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor.
+
+**Step 2**: Run the model checker by pressing the ![run_asmeta_model](images/runSMV.png) button. 
+All the properties are true.
+
+If a property is false, a counter-example is shown. To test this remove *"not"* from line 81. When running the model checker a counter-example is shown.
+
+## From an ASMETA Model to Code
