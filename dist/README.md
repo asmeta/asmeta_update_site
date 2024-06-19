@@ -8,7 +8,13 @@
 >Title of the original tutorial paper *"ASMETA tool set for rigorous system design"* submitted at the 26th International Symposium on Formal Methods (FM 2024) - Tutorial track
 
 
-## Software installation
+# Index
+* [Software Installation](#SWinstallation)
+* [Model Simulation: AsmetaS](#AsmetaS)
+  * [Interactive Simulation](#AsmetaSInt)   
+
+
+## <a name="SWinstallation">Software installation</a>
 **Step 1**: Download the .zip file containing the Asmeta tools available [here](https://zenodo.org/records/11955939) depending on your system:
 
 * [eclipse_asmeta_smv_2024_06_win64.zip](https://zenodo.org/records/11955939/files/eclipse_asmeta_smv_2024_06_win64.zip?download=1) 
@@ -32,9 +38,9 @@ For other platforms, instead, we provide an update site that can be used to inst
 
 In the following, we will explain the steps to use the Asmeta tools on the *pillbox_ground.asm* model, the same steps can be followed for the other models.
 
-## Model Simulation: AsmetaS
+## <a name="AsmetaS">Model Simulation: AsmetaS</a>
 
-### Interactive Simulation
+### <a name="AsmetaSInt">Interactive Simulation</a>
 
 **Step 1**: Uncheck the following two options in "Window -> Preferences -> Asmeta -> Simulator":
 
