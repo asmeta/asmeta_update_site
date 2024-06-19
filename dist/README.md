@@ -33,6 +33,8 @@
 
 **Step 2**: Unzip the content.
 
+> **_NOTE:_**  The zip file contains the eclipse with all the necessary plugins, the NuSMV model checker, the workspace with libraries and models for the tutorial, and the scripts to correctly set the environment and launch eclipse with asmeta.
+
 **Step 3**: Run the file in the main folder depending on your OS:
 
 * win64: *asmeta_win64.bat*
