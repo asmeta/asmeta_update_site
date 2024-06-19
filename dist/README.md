@@ -294,7 +294,7 @@ If a property is false, a counter-example is shown. To test this remove *"not"* 
 ```
 java -jar Asmeta2Cpp.jar pillbox_final.asm
 ```
-The *.h* and *.cpp* files are generated.
+The *pillbox_final.h* and *pillbox_final.cpp* files are generated.
 
 
 
