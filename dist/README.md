@@ -179,5 +179,15 @@ In the following are listed the **inputs to be set** in the windows that appear 
    * isPillTobeTaken(drawer1)=false
    * isPillTobeTaken(drawer2)=false
    * isPillTobeTaken(drawer3)=false
-  
+
+After following these steps, this is the output in the animator, where light-blue background means that it is the initial value of functions, and green background means that the function value has changed:
+
+ ![run_asmeta_animator](images/asmetaA_run.png)
+ 
 To animate other scenarios use different inputs.
+
+### Random Animation
+
+**Step 2**: Press  *"Do random step/s"* button in the animator. The specification is executed with a random set of inputs.
+
+The specification can be animated randomly step by step or more steps can be automatically randomly executed by setting the number of steps in the text box under the inscription *Insert random step number*.
