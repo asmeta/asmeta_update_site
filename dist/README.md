@@ -48,6 +48,10 @@ For other platforms, instead, we provide an update site that can be used to inst
 
 In the following, we will explain the steps to use the Asmeta tools on the *pillbox_ground.asm* model, the same steps can be followed for the other models.
 
+>[!NOTE]
+> Java is mandatory to run this tutorial. If it is not installed on your PC you can download it [here](https://www.oracle.com/it/java/technologies/downloads/).
+
+
 <a id='AsmetaS'></a>
 # Model Simulation: AsmetaS
 
