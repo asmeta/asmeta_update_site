@@ -3,6 +3,8 @@
 
 This document contains the steps to be followed to reproduce the tutorial’s claims.
 
+This contains operative steps, to know more about the theory and the behavior please read the tutorial paper.
+
 ## Software installation
 **Step 1**: Download the .zip file containing the Asmeta tools available [here](https://zenodo.org/records/11955939) depending on your system:
 
@@ -117,9 +119,9 @@ The inputs are randomly chosen, and the simulation is displayed in the console.
 
 ## Model Animation: AsmetaA
 
-**Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification using the animator by pressing the ![run_asmeta_model](images/runAnimatorInt.png) button.
-
 ### Interactive Animation
+
+**Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification using the animator by pressing the ![run_asmeta_model](images/runAnimatorInt.png) button.
 
 Let's assume that we want to animate the scenario in Fig. 6 of the paper (which is the same as the simulation): *the pill in drawer 1 hits the deadline (in State 0), so the pill becomes to be taken (State 1), the led becomes ON (State 2), the user takes the pill, and the led becomes OFF (State 3)*.
 In the following are listed the **inputs to be set** in the windows that appear to acquire inputs.
@@ -187,6 +189,8 @@ After following these steps, this is the output in the animator, where light-blu
 To animate other scenarios use different inputs.
 
 ### Random Animation
+
+**Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification using the animator by pressing the ![run_asmeta_model](images/runAnimatorInt.png) button.
 
 **Step 2**: Press  *"Do random step/s"* button in the animator. The specification is executed with a random set of inputs.
 
