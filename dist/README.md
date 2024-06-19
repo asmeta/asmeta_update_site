@@ -24,7 +24,7 @@
 * <a href="#AsmetatoCode">From an ASMETA Model to Code</a>
   
 <a id='SWinstallation'></a>
-## Software installation
+# Software installation
 **Step 1**: Download the .zip file containing the Asmeta tools available [here](https://zenodo.org/records/11955939) depending on your system:
 
 * [eclipse_asmeta_smv_2024_06_win64.zip](https://zenodo.org/records/11955939/files/eclipse_asmeta_smv_2024_06_win64.zip?download=1) 
@@ -49,7 +49,7 @@ For other platforms, instead, we provide an update site that can be used to inst
 In the following, we will explain the steps to use the Asmeta tools on the *pillbox_ground.asm* model, the same steps can be followed for the other models.
 
 <a id='AsmetaS'></a>
-## Model Simulation: AsmetaS
+# Model Simulation: AsmetaS
 
 <a id='AsmetaSInt'></a>
 ### Interactive Simulation
@@ -144,7 +144,7 @@ To simulate other scenarios use different inputs.
 The inputs are randomly chosen, and the simulation is displayed in the console.
 
 <a id='AsmetaA'></a>
-## Model Animation: AsmetaA
+# Model Animation: AsmetaA
 
 <a id='AsmetaAInt'></a>
 ### Interactive Animation
@@ -230,7 +230,7 @@ To animate other scenarios use different inputs.
 The specification can be animated randomly step by step or more steps can be automatically randomly executed by setting the number of steps in the text box under the inscription *Insert random step number*.
 
 <a id='AsmetaV'></a>
-## Scenario-based Validation: AsmetaV
+# Scenario-based Validation: AsmetaV
 
 Let's assume that we want to validate the model using the scenario in Listing 2 of the paper: 
 
@@ -260,7 +260,7 @@ The output of the scenario execution is displayed in the animator.
 Press *"Do random step/s"* button and set the number of steps in the text box under the inscription *Insert random step number* to run automatically more than one step.
 
 <a id='AsmetaMA'></a>
-## Model review: AsmetaMA
+# Model review: AsmetaMA
 
 **Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor.
 
@@ -268,7 +268,7 @@ Press *"Do random step/s"* button and set the number of steps in the text box un
 The output is displayed in the console.
 
 <a id='AsmetaSMV'></a>
-## Formal Verification Through Model Checking: AsmetaSMV
+# Formal Verification Through Model Checking: AsmetaSMV
 
 **Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor.
 
@@ -278,4 +278,4 @@ All the properties are true.
 If a property is false, a counter-example is shown. To test this remove *"not"* from line 81. When running the model checker a counter-example is shown.
 
 <a id='AsmetatoCode'></a>
-## From an ASMETA Model to Code
+# From an ASMETA Model to Code
