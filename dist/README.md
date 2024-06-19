@@ -12,7 +12,17 @@
 * <a href="#SWinstallation">Software Installation</a>
 * <a href="#AsmetaS">Model Simulation: AsmetaS</a>
   * <a href="#AsmetaSInt">Interactive Simulation</a>
-
+  * <a href="#AsmetaSRnd">Random Simulation</a>
+ * <a href="#AsmetaA">Model Animation: AsmetaA</a>
+  * <a href="#AsmetaSInt">Interactive Animation</a>
+  * <a href="#AsmetaSRnd">Random Animation</a>
+* <a href="#AsmetaV">Scenario-based Validation: AsmetaV</a>
+  * <a href="#AsmetaVConsole">Scenario-based Validation</a>
+  * <a href="#AsmetaVA">Scenario-based Validation with Animator</a>
+* <a href="#AsmetaMA">Model Review: AsmetaMA</a>
+* <a href="#AsmetaSMV">Formal Verification Through Model Checking: AsmetaSMV</a>
+* <a href="#AsmetatoCode">From an ASMETA Model to Code</a>
+  
 <a id='SWinstallation'></a>
 ## Software installation
 **Step 1**: Download the .zip file containing the Asmeta tools available [here](https://zenodo.org/records/11955939) depending on your system:
@@ -124,6 +134,7 @@ In the following are listed the current state, the **inputs to be set** in the c
   
 To simulate other scenarios use different inputs.
 
+<a id='AsmetaSRnd'></a>
 ### Random Simulation
 
 **Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor.
@@ -132,8 +143,10 @@ To simulate other scenarios use different inputs.
 
 The inputs are randomly chosen, and the simulation is displayed in the console.
 
+<a id='AsmetaA'></a>
 ## Model Animation: AsmetaA
 
+<a id='AsmetaAInt'></a>
 ### Interactive Animation
 
 **Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor.
@@ -205,6 +218,7 @@ After following these steps, this is the output in the animator, where light-blu
  
 To animate other scenarios use different inputs.
 
+<a id='AsmetaARnd'></a>
 ### Random Animation
 
 **Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor.
@@ -215,7 +229,7 @@ To animate other scenarios use different inputs.
 
 The specification can be animated randomly step by step or more steps can be automatically randomly executed by setting the number of steps in the text box under the inscription *Insert random step number*.
 
-
+<a id='AsmetaV'></a>
 ## Scenario-based Validation: AsmetaV
 
 Let's assume that we want to validate the model using the scenario in Listing 2 of the paper: 
@@ -224,6 +238,7 @@ Let's assume that we want to validate the model using the scenario in Listing 2 
 execution step, we check that the LED corresponding to the first drawer is ON.
 Finally, after the patient has taken the pill, the scenario verifies whether all the LEDs have been turned OFF.*
 
+<a id='AsmetaVConsole'></a>
 ### Scenario-based Validation 
 
 **Step 1**: Open the *scenario_ground.avalla* in the Eclipse editor.
@@ -233,6 +248,7 @@ The output of the scenario execution is displayed in the console, and all checks
 
 If a check violation occurs, it finishes with *"WARNING: some check failed"*. To test this change line 46 in the *scenario_ground.avalla* file by replacing *OFF* with *ON*.
 
+<a id='AsmetaVA'></a>
 ### Scenario-based Validation with Animator
 
 **Step 1**: Open the *scenario_ground.avalla* in the Eclipse editor.
@@ -243,6 +259,7 @@ The output of the scenario execution is displayed in the animator.
 **Step 3**: Press *"Do one interactive step"* button to run the scenario step by step.
 Press *"Do random step/s"* button and set the number of steps in the text box under the inscription *Insert random step number* to run automatically more than one step.
 
+<a id='AsmetaMA'></a>
 ## Model review: AsmetaMA
 
 **Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor.
@@ -250,6 +267,7 @@ Press *"Do random step/s"* button and set the number of steps in the text box un
 **Step 2**: Run the model review by pressing the ![run_asmeta_model](images/runMA.png) button.
 The output is displayed in the console.
 
+<a id='AsmetaSMV'></a>
 ## Formal Verification Through Model Checking: AsmetaSMV
 
 **Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor.
@@ -259,4 +277,5 @@ All the properties are true.
 
 If a property is false, a counter-example is shown. To test this remove *"not"* from line 81. When running the model checker a counter-example is shown.
 
+<a id='AsmetatoCode'></a>
 ## From an ASMETA Model to Code
