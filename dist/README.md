@@ -1,9 +1,12 @@
 # Artifact guidelines
-## Title of the original tutorial paper "ASMETA tool set for rigorous system design" submitted at the 26th International Symposium on Formal Methods (FM 2024) - Tutorial track
+>[!NOTE]
+>
+>This document contains the steps to be followed to reproduce the tutorial’s claims.
+>
+>This contains operative steps, to know more about the theory and the behavior please read the tutorial paper.
+>
+>Title of the original tutorial paper *"ASMETA tool set for rigorous system design"* submitted at the 26th International Symposium on Formal Methods (FM 2024) - Tutorial track
 
-This document contains the steps to be followed to reproduce the tutorial’s claims.
-
-This contains operative steps, to know more about the theory and the behavior please read the tutorial paper.
 
 ## Software installation
 **Step 1**: Download the .zip file containing the Asmeta tools available [here](https://zenodo.org/records/11955939) depending on your system:
