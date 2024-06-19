@@ -22,12 +22,14 @@ Eclipse is now running and in the workspace there are two projects:
 * *STDL* containing the Asmeta libraries
 * *tutorial_FM24* containing the Asmeta models of the Pill-Box Case Study
 
-For other platforms, instead, we provide an update site that can be used to install all the required plugins in any Eclipse version. Then the projects *STDL* and *tutorial_FM24* can be downloaded and imported in Eclipse from [here](https://github.com/asmeta/asmeta/tree/master/asmeta_models).
+For other platforms, instead, we provide an update site that can be used to install all the required plugins in any Eclipse version. Then the projects *STDL* and *tutorial_FM24* can be downloaded from [here](https://github.com/asmeta/asmeta/tree/master/asmeta_models) and imported into Eclipse.
 
 
-In the following, we will explain the steps to use the Asmeta tools on the *pillbox_ground.asm* model.
+In the following, we will explain the steps to use the Asmeta tools on the *pillbox_ground.asm* model, the same steps can be followed for the other models.
 
-## Model Simulation
+## Model Simulation: AsmetaS
+
+### Interactive simulation
 
 Step 1: Uncheck the following two options in "Window -> Preferences -> Asmeta -> Simulator":
 
@@ -105,6 +107,11 @@ In the following are listed the current state, the **inputs to be set** in the c
    * isPillTobeTaken(drawer2)=false
    * isPillTobeTaken(drawer3)=false
   
+To simulate other scenarios use different inputs.
+
+### Random simulation
+
+Step 1: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification iteratively in the console using ![run_asmeta_model](images/run_rnd.png) button.
 
 ## Model Animation     
 
