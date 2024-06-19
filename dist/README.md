@@ -254,7 +254,7 @@ The output is displayed in the console.
 
 **Step 1**: Open the *pillbox_ground.asm* model in the Eclipse editor.
 
-**Step 2**: Run the model checker by pressing the ![run_asmeta_model](images/runSMV.png) button. 
+**Step 2**: Run the model checker by pressing the ![run_asmeta_model](images/run_modelchecker.png) button. 
 All the properties are true.
 
 If a property is false, a counter-example is shown. To test this remove *"not"* from line 81. When running the model checker a counter-example is shown.
