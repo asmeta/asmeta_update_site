@@ -111,7 +111,10 @@ To simulate other scenarios use different inputs.
 
 ### Random simulation
 
-Step 1: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification iteratively in the console using ![run_asmeta_model](images/run_rnd.png) button.
+Step 1: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification randomly in the console using ![run_asmeta_model](images/run_rnd.png) button.
+
+The inputs are randomly chosen, and the simulation is displayed in the console.
 
 ## Model Animation     
 
+Step 1: Open the *pillbox_ground.asm* model in the Eclipse editor then run the specification using the animator by pressing the ![run_asmeta_model](images/runAnimatorInt.png) button.
