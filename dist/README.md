@@ -31,7 +31,7 @@
 * [eclipse_asmeta_smv_2024_06_linux_x86_64.zip](https://zenodo.org/records/11955939/files/eclipse_asmeta_smv_2024_06_linux_x86_64.zip?download=1) 
 * [eclipse_asmeta_smv_2024_06_macOs_aarch64.zip](https://zenodo.org/records/11955939/files/eclipse_asmeta_smv_2024_06_macOs_aarch64.zip?download=1) 
 
-**Step 2**: Unzip the content
+**Step 2**: Unzip the content.
 
 **Step 3**: Run the file in the main folder depending on your OS:
 
@@ -279,3 +279,23 @@ If a property is false, a counter-example is shown. To test this remove *"not"* 
 
 <a id='AsmetatoCode'></a>
 # From an ASMETA Model to Code
+
+**Step 1**: Download the .zip file [eclipse_asmeta_smv_2024_06_cli.zip](https://zenodo.org/records/11955939/files/eclipse_asmeta_smv_2024_06_cli.zip?download=1).
+
+**Step 2**: Unzip the content.
+
+**Step 3**: Copy the *Asmeta2Cpp.jar* file in the same folder where the *"pillbox_final.asm"* is.
+
+**Step 3**: Run the command   
+```
+java -jar Asmeta2Cpp.jar pillbox_final.asm
+```
+
+
+
+
+
+
+
+
+
