@@ -50,7 +50,7 @@ Eclipse is now running and in the workspace there are two projects:
 in "Window -> Preferences -> Asmeta -> AsmetaSMV -> NuSMV executable program" select the path to the NuSMV executable file
 
 * linux_x86_64: "eclipse_asmeta_smv_2024_06_linux_x86_64\asmeta_linux_x86_64\NuSMV-2.6.0-Linux\bin\NuSMV"
-* macOs_aarch64: "eclipse_asmeta_smv_2024_06_macOs_aarch64.zip\macOs_aarch64\NuSMV-2.6.0-Darwin\bin\NuSMV" 
+* macOs_aarch64: "eclipse_asmeta_smv_2024_06_macOs_aarch64\macOs_aarch64\NuSMV-2.6.0-Darwin\bin\NuSMV" 
 
 For other platforms, instead, we provide an update site that can be used to install all the required plugins in any Eclipse version. Then the projects *STDL* and *tutorial_FM24* can be downloaded from [here](https://github.com/asmeta/asmeta/tree/master/asmeta_models) and imported into Eclipse.
 
