@@ -47,7 +47,7 @@ baseasmetalocale=D:\\AgHome\\progettidaSVNGIT
 # 
 # adesso prova ad installare
 #
-./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://download.eclipse.org/releases/latest,file:/$baseasmetalocale\\asmeta\\asmeta_update_site -installIU Asmeta
+./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://download.eclipse.org/releases/latest,file:/C:\\Users\\angel\\codicefromrepos\\ricerca\\asmeta\\asmeta_update_site -installIU Asmeta
 
 #
 # this is to test the official update site
