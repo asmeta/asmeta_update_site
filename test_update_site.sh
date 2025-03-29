@@ -1,73 +1,90 @@
 #!/bin/bash
-
 # save the current location
 updatesite=$(pwd)
-echo "$updatesite" 
+echo "$updatesite"
+# the name of the dir
+OLD_ECL=eclipse_fresh
 
-eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2024-06/R/
+#
+# remove old eclipse (it may contain asmeta) (already in temp)
+#
+remove_old_eclipse(){
+	if [ -d "$OLD_ECL" ]; then
+    	printf '%s\n' "Removing existings eclipse ($OLD_ECL)"
+    	rm -rf "$OLD_ECL"
+	fi
+}
+# 
+# download the latest eclipse (already in temp)
+# 
+download_eclipse(){
+	eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2025-03/R/
+	eclipsezip=eclipse-java-2025-03-R-win32-x86_64.zip
 
-eclipsezip=eclipse-java-2024-06-R-win32-x86_64.zip
+	# first download eclipse
+	# use he mirror service, skip if it already exists 
+	wget --no-clobber ${eclipseurldir}${eclipsezip}
+	#
+	# unzip the new one
+	unzip ${eclipsezip}
+	# 
+	mv eclipse $OLD_ECL
+}
+#
+# install the plugins
+#
+install_plugins(){
+	cd $OLD_ECL
+	#
+	# this is to test the local update site
+	# questo non funziona perch� LTS prende un path diverso e la variabile non punta a directory corretta.
+	#./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository file://$updatesite  -installIU Asmeta
+	# questo non va perch� il path lo interpreta male
+	# ./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository file:/home/garganti/progettiDaSVN/asmeta/asmeta_update_site  -installIU Asmeta
+	# uso i path di windows
+	# questo sul fisso dell'ufficio
+	# baseasmetalocale=D:\\AgHome\\progettidaSVNGIT
+	# questo da casa
+	# baseasmetalocale=D:\\AgDocuments\\progettiDaSVN
+	# questo dal portatile
+	baseasmetalocale=C:\\Users\\angel\\codicefromrepos\\ricerca	
+	
+	#baseasmetalocale=/home/garganti/winhome/codicefromrepos/ricerca/
+	# 
+	# adesso prova ad installare
+	echo $baseasmetalocale
+	#
+	./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://download.eclipse.org/releases/latest,file:/$baseasmetalocale\\asmeta\\asmeta_update_site -installIU Asmeta
+	#
+	# this is to test the official update site
+	# ./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://raw.githubusercontent.com/asmeta/asmeta_update_site/master,https://download.eclipse.org/releases/latest -installIU Asmeta
+	cd ..
+	# test as update - NON RIESCO p2. director non permette l'update
+}
+# build the zip
+make_zip(){
+	# rename as eclipse
+	mv $OLD_ECL eclipse
+	# 
+	zipname=eclipse_asmeta_smv_2025_04_win64.zip
+	#
+	#zip -r ${zipname} eclipse
+	#zip -r ${zipname} eclipse
+	zip -r ${zipname} NuSMV-2.7.0-win64
+	zip -r ${zipname} nuXmv-2.1.0-win64
+	zip ${zipname} eclipse_nusmv.bat	
+}
 
+# main
+# common go to temp
 # make a temp dir
 #mkdir temp
-cd temp
-# first download eclipse
-# use he mirror service, skip if it already exists 
-wget --no-clobber ${eclipseurldir}${eclipsezip}
+pushd temp
+# personalize
 
-# test with a fresh installation
-#
-# remove old eclipse (it may contain asmeta)
-OLD_ECL=eclipse_fresh
-if [ -d "$OLD_ECL" ]; then
-    printf '%s\n' "Removing existings eclipse ($OLD_ECL)"
-    rm -rf "$OLD_ECL"
-fi
-
-# unzip the new one
-unzip ${eclipsezip}
-# 
-mv eclipse $OLD_ECL
-
-# install the plugins
-cd $OLD_ECL
-#
-# this is to test the local update site
-# questo non funziona perch� LTS prende un path diverso e la variabile non punta a directory corretta.
-#./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository file://$updatesite  -installIU Asmeta
-# questo non va perch� il path lo interpreta male
-# ./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository file:/home/garganti/progettiDaSVN/asmeta/asmeta_update_site  -installIU Asmeta
-# uso i path di windows
-# questo sul fisso dell'ufficio
-baseasmetalocale=D:\\AgHome\\progettidaSVNGIT
-# questo da casa
-# baseasmetalocale=D:\\AgDocuments\\progettiDaSVN
-# questo dal portatile
-# baseasmetalocale=C:\\Users\\angel\\codicefromrepos\\ricerca
-# 
-# adesso prova ad installare
-#
-./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://download.eclipse.org/releases/latest,file:/C:\\Users\\angel\\codicefromrepos\\ricerca\\asmeta\\asmeta_update_site -installIU Asmeta
-
-#
-# this is to test the official update site
-# ./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://raw.githubusercontent.com/asmeta/asmeta_update_site/master,https://download.eclipse.org/releases/latest -installIU Asmeta
-
-cd ..
-
-# test as update - NON RIESCO p2. director non permette l'update
-# remove old eclipse
-#rm -rf eclipse_update
-#unzip the new one
-#unzip eclipse-java-2020-12-R-win32-x86_64.zip 
-#mv eclipse eclipse_update
-#cd eclipse_update
-# install from old repo
-#./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://raw.githubusercontent.com/asmeta/asmeta_update_site/master,https://download.eclipse.org/releases/latest -installIU Asmeta
-# now update with the new one
-# NON FUNZUIONA DA FARE A MANO
-#./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://download.eclipse.org/releases/latest,file:/D:\\AgDocuments\\progettiDaSVN\\asmeta\\asmeta_update_site -installIU Asmeta
-
-
-# delete temp
-#rm -rf temp
+#  remove_old_eclipse
+#  download_eclipse
+# COMMENTinstall the plugins
+#   install_plugins
+make_zip 
+popd
