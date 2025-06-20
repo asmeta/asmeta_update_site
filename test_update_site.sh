@@ -18,8 +18,8 @@ remove_old_eclipse(){
 # download the latest eclipse (already in temp)
 # 
 download_eclipse(){
-	eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2025-03/R/
-	eclipsezip=eclipse-java-2025-03-R-win32-x86_64.zip
+	eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2025-06/R/
+	eclipsezip=eclipse-java-2025-06-R-win32-x86_64.zip
 
 	# first download eclipse
 	# use he mirror service, skip if it already exists 
@@ -42,15 +42,19 @@ install_plugins(){
 	# questo non va perch� il path lo interpreta male
 	# ./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository file:/home/garganti/progettiDaSVN/asmeta/asmeta_update_site  -installIU Asmeta
 	# uso i path di windows
+	#
 	# questo sul fisso dell'ufficio
-	# baseasmetalocale=D:\\AgHome\\progettidaSVNGIT
-	# questo da casa
+	baseasmetalocale=D:\\AgHome\\progettidaSVNGIT
+	#
+	# questo da casa vecchio
 	# baseasmetalocale=D:\\AgDocuments\\progettiDaSVN
+	#
 	# questo dal portatile asus zenbook
-	# baseasmetalocale=C:\\Users\\angel\\codicefromrepos\\ricerca	
+	# baseasmetalocale=C:\\Users\\angel\\codicefromrepos\\ricerca
+	#	
 	# dal portatile duo 
-	baseasmetalocale=C:\\Users\\angel\\codiceDaRepos\\research	
-	
+	#baseasmetalocale=C:\\Users\\angel\\codiceDaRepos\\research	
+	#
 	#baseasmetalocale=/home/garganti/winhome/codicefromrepos/ricerca/
 	# 
 	# adesso prova ad installare
@@ -82,11 +86,10 @@ make_zip(){
 # make a temp dir if not exists
 mkdir -p temp
 pushd temp
-# personalize
-# comment/uncomment what you want
-#  remove_old_eclipse
-#  download_eclipse
-# COMMENTinstall the plugins
-#   install_plugins
+# personalize - comment/uncomment what you want
+# remove_old_eclipse
+# download_eclipse
+# try to install the plugin
+install_plugins
 # make_zip 
 popd
