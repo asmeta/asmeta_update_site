@@ -46,8 +46,10 @@ install_plugins(){
 	# baseasmetalocale=D:\\AgHome\\progettidaSVNGIT
 	# questo da casa
 	# baseasmetalocale=D:\\AgDocuments\\progettiDaSVN
-	# questo dal portatile
-	baseasmetalocale=C:\\Users\\angel\\codicefromrepos\\ricerca	
+	# questo dal portatile asus zenbook
+	# baseasmetalocale=C:\\Users\\angel\\codicefromrepos\\ricerca	
+	# dal portatile duo 
+	baseasmetalocale=C:\\Users\\angel\\codiceDaRepos\\research	
 	
 	#baseasmetalocale=/home/garganti/winhome/codicefromrepos/ricerca/
 	# 
@@ -77,14 +79,14 @@ make_zip(){
 
 # main
 # common go to temp
-# make a temp dir
-#mkdir temp
+# make a temp dir if not exists
+mkdir -p temp
 pushd temp
 # personalize
-
+# comment/uncomment what you want
 #  remove_old_eclipse
 #  download_eclipse
 # COMMENTinstall the plugins
 #   install_plugins
-make_zip 
+# make_zip 
 popd
