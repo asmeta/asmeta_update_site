@@ -72,10 +72,9 @@ make_zip(){
 	# rename as eclipse
 	mv $OLD_ECL eclipse
 	# 
-	zipname=eclipse_asmeta_smv_2025_04_win64.zip
+	zipname=eclipse_asmeta_smv_2025_06_win64.zip
 	#
-	#zip -r ${zipname} eclipse
-	#zip -r ${zipname} eclipse
+	zip -r ${zipname} eclipse
 	zip -r ${zipname} NuSMV-2.7.0-win64
 	zip -r ${zipname} nuXmv-2.1.0-win64
 	zip ${zipname} eclipse_nusmv.bat	
@@ -87,9 +86,9 @@ make_zip(){
 mkdir -p temp
 pushd temp
 # personalize - comment/uncomment what you want
-# remove_old_eclipse
-# download_eclipse
+#remove_old_eclipse
+#download_eclipse
 # try to install the plugin
-install_plugins
-# make_zip 
+# install_plugins
+make_zip 
 popd
