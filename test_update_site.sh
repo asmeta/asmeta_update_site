@@ -18,8 +18,8 @@ remove_old_eclipse(){
 # download the latest eclipse (already in temp)
 # 
 download_eclipse(){
-	eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2025-06/R/
-	eclipsezip=eclipse-java-2025-06-R-win32-x86_64.zip
+	eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2025-09/R/
+	eclipsezip=eclipse-java-2025-09-R-win32-x86_64.zip
 
 	# first download eclipse
 	# use he mirror service, skip if it already exists 
@@ -72,7 +72,7 @@ make_zip(){
 	# rename as eclipse
 	mv $OLD_ECL eclipse
 	# 
-	zipname=eclipse_asmeta_smv_2025_06_win64.zip
+	zipname=eclipse_asmeta_smv_2025_09_win64.zip
 	#
 	zip -r ${zipname} eclipse
 	zip -r ${zipname} NuSMV-2.7.0-win64
@@ -89,6 +89,6 @@ pushd temp
 #remove_old_eclipse
 #download_eclipse
 # try to install the plugin
-# install_plugins
+#install_plugins
 make_zip 
 popd
