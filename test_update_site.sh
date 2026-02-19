@@ -48,10 +48,13 @@ install_plugins(){
 	# uso i path di windows
 	#
 	# questo sul fisso dell'ufficio
-	baseasmetalocale=D:\\AgHome\\progettidaSVNGIT
+	#baseasmetalocale=D:\\AgHome\\progettidaSVNGIT
 	#
 	# questo da casa vecchio
 	# baseasmetalocale=D:\\AgDocuments\\progettiDaSVN
+	#
+	# PC asus nuovo casa
+	baseasmetalocale=C:\\Users\\angel\\Documents\\codefromrepos
 	#
 	# questo dal portatile asus zenbook
 	# baseasmetalocale=C:\\Users\\angel\\codicefromrepos\\ricerca
@@ -88,9 +91,9 @@ make_zip(){
 mkdir -p temp
 pushd temp
 # personalize - comment/uncomment what you want
-#remove_old_eclipse
-#download_eclipse
+remove_old_eclipse
+download_eclipse
 # try to install the plugin
-#install_plugins
-make_zip 
+install_plugins
+#make_zip 
 popd
