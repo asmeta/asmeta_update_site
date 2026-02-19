@@ -5,6 +5,12 @@ echo "$updatesite"
 # the name of the dir
 OLD_ECL=eclipse_fresh
 
+# this part can be changed
+eclipsesubdir=2025-12/R/ 
+eclipsezip=eclipse-java-2025-12-R-win32-x86_64.zip
+zipname=eclipse_asmeta_smv_2026_02_win64.zip
+
+
 #
 # remove old eclipse (it may contain asmeta) (already in temp)
 #
@@ -18,12 +24,10 @@ remove_old_eclipse(){
 # download the latest eclipse (already in temp)
 # 
 download_eclipse(){
-	eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/2025-09/R/
-	eclipsezip=eclipse-java-2025-09-R-win32-x86_64.zip
-
+	eclipseurldir=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/
 	# first download eclipse
 	# use he mirror service, skip if it already exists 
-	wget --no-clobber ${eclipseurldir}${eclipsezip}
+	wget --no-clobber ${eclipseurldir}${eclipsesubdir}${eclipsezip}
 	#
 	# unzip the new one
 	unzip ${eclipsezip}
@@ -71,8 +75,6 @@ install_plugins(){
 make_zip(){
 	# rename as eclipse
 	mv $OLD_ECL eclipse
-	# 
-	zipname=eclipse_asmeta_smv_2025_09_win64.zip
 	#
 	zip -r ${zipname} eclipse
 	zip -r ${zipname} NuSMV-2.7.0-win64
