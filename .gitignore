@@ -4,7 +4,6 @@
 logs.zip
 .settings/org.sonarlint.eclipse.core.prefs
 logs.zip
-dist/eclipse_asmeta_smv_2024_06_win64.zip
-/dist/asmeta_linux_x86_64
-/dist/asmeta_win64
-dist/eclipse_asmeta_smv_2024_06_linux_x86_64.zip
+dist*/*.zip
+dist*/asmeta_linux_x86_64
+dist*/asmeta_win64
