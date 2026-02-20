@@ -49,10 +49,13 @@ install_plugins(){
 	# uso i path di windows
 	#
 	# questo sul fisso dell'ufficio
-	baseasmetalocale=D:\\AgHome\\progettidaSVNGIT
+	#baseasmetalocale=D:\\AgHome\\progettidaSVNGIT
 	#
 	# questo da casa vecchio
 	# baseasmetalocale=D:\\AgDocuments\\progettiDaSVN
+	#
+	# PC asus nuovo casa
+	baseasmetalocale=C:\\Users\\angel\\Documents\\codefromrepos
 	#
 	# questo dal portatile asus zenbook
 	# baseasmetalocale=C:\\Users\\angel\\codicefromrepos\\ricerca
@@ -62,10 +65,10 @@ install_plugins(){
 	#
 	#baseasmetalocale=/home/garganti/winhome/codicefromrepos/ricerca/
 	#
-	updatelocation= $baseasmetalocale\\asmeta\\asmeta_update_site 
+	updatelocation=${baseasmetalocale}\\asmeta\\asmeta_update_site 
 	# adesso prova ad installare
 		
-	echo "location of the update site: $updatelocation"
+	echo "location of the update site: ${updatelocation}"
 	#
 	./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://download.eclipse.org/releases/latest,file:/$updatelocation -installIU Asmeta
 	#
@@ -91,9 +94,9 @@ make_zip(){
 mkdir -p temp
 pushd temp
 # personalize - comment/uncomment what you want
-remove_old_eclipse
+#remove_old_eclipse
 download_eclipse
 # try to install the plugin
 install_plugins
-make_zip 
+#make_zip 
 popd
