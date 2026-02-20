@@ -1,7 +1,7 @@
 #!/bin/bash
 # save the current location
 updatesite=$(pwd)
-echo "$updatesite"
+echo "location of the script $updatesite"
 # the name of the dir
 OLD_ECL=eclipse_fresh
 
@@ -9,6 +9,7 @@ OLD_ECL=eclipse_fresh
 eclipsesubdir=2025-12/R/ 
 eclipsezip=eclipse-java-2025-12-R-win32-x86_64.zip
 zipname=eclipse_asmeta_smv_2026_02_win64.zip
+
 
 
 #
@@ -60,11 +61,13 @@ install_plugins(){
 	#baseasmetalocale=C:\\Users\\angel\\codiceDaRepos\\research	
 	#
 	#baseasmetalocale=/home/garganti/winhome/codicefromrepos/ricerca/
-	# 
-	# adesso prova ad installare
-	echo $baseasmetalocale
 	#
-	./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://download.eclipse.org/releases/latest,file:/$baseasmetalocale\\asmeta\\asmeta_update_site -installIU Asmeta
+	updatelocation= $baseasmetalocale\\asmeta\\asmeta_update_site 
+	# adesso prova ad installare
+		
+	echo "location of the update site: $updatelocation"
+	#
+	./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://download.eclipse.org/releases/latest,file:/$updatelocation -installIU Asmeta
 	#
 	# this is to test the official update site
 	# ./eclipsec.exe -noSplash -application org.eclipse.equinox.p2.director  -repository https://raw.githubusercontent.com/asmeta/asmeta_update_site/master,https://download.eclipse.org/releases/latest -installIU Asmeta
@@ -88,9 +91,9 @@ make_zip(){
 mkdir -p temp
 pushd temp
 # personalize - comment/uncomment what you want
-#remove_old_eclipse
-#download_eclipse
+remove_old_eclipse
+download_eclipse
 # try to install the plugin
-#install_plugins
+install_plugins
 make_zip 
 popd
