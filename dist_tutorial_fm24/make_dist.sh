@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd dist 
-
 # copy from temp to here in win64
 #cp -r ../temp/eclipse_fresh win64
 #cd win64
