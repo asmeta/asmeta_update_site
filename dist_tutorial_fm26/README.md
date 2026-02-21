@@ -34,13 +34,13 @@ This section describes how to install and configure the ASMETA toolset included 
 ### Step 1
 Download the `.zip` file containing the Asmeta tool included in the replication package:
 
-- `eclipse_asmeta_smv_2025_12_win64.zip`
+- `eclipse_asmeta_smv_2026_02_win64.zip`
 
 ### Step 2
 Unzip the content.
 
 **NOTE:**  
-The zip file contains Eclipse with all necessary plugins, the NuSMV model checker, the workspace with libraries and models for the tutorial, and the scripts to correctly set the environment and launch Eclipse with Asmeta.
+The zip file contains Eclipse with all necessary plugins, the workspace with libraries and models for the tutorial, and the script to correctly set the environment and launch Eclipse with Asmeta.
 
 ### Step 3
 Run the `asmeta_win64.bat` file in the main folder.
@@ -172,6 +172,6 @@ The resulting scenario is diplayed on the console and it can be copy/pasted in a
 1. Right click on the `Scheduler.asm` in the Package Explorer window of the Eclipse editor.
 2. Select `Run as...` -> `2 ATGT Random test generator`.
 
-<img src="images/scenarioGeneration.png" width="500">
+<img src="images/scenarioGeneration.png" width="400">
 
 The resulting set of scenarios is generated in the `abstracttests` folder.
