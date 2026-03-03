@@ -35,6 +35,7 @@ This section describes how to run the Docker container included in the replicati
 ---
 
 Prerequisites:
+
 - A CPU supporting linux/amd64 architecture
 - Docker installed on your system (https://docs.docker.com/get-docker/)
 
@@ -47,6 +48,7 @@ You can verify Docker installation with:
 ### Step 1
 
 Download the `.tar.gz` file included in the replication package:
+
 - `asmeta-validation-tutorial.tar.gz`
 
 Load the Docker image (this may take a few minutes):
@@ -197,7 +199,7 @@ You can also run validation for the scenarios with prefix from `S4_` to `S7_`.
 3. Press `Do one interactive step` button to run the scenario step by step.
 Press `Do random step/s` button and set the number of steps in the text box under the inscription `Insert random step number` to run automatically more than one step.
 
-<img src="images/Animation.png" width="600">
+<img src="images/Animation.png" width="550">
 
 Eventual invariant violation (e.g., from `S3_InvariantViolation.avalla`) and errors (e.g., from `S8_RandomScenario.avalla`) will appear in the `Invariant violation / exceptions` box.
 

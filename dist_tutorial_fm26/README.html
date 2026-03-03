@@ -37,14 +37,21 @@ macOS with Apple Silicon (M1/M2/M3) unless Docker emulation for amd64
 images is enabled.</p>
 </blockquote>
 <hr />
-<p>Prerequisites: - A CPU supporting linux/amd64 architecture - Docker
-installed on your system (https://docs.docker.com/get-docker/)</p>
+<p>Prerequisites:</p>
+<ul>
+<li>A CPU supporting linux/amd64 architecture</li>
+<li>Docker installed on your system
+(https://docs.docker.com/get-docker/)</li>
+</ul>
 <p>You can verify Docker installation with:</p>
 <p><code>docker --version</code></p>
 <hr />
 <h3 id="step-1">Step 1</h3>
 <p>Download the <code>.tar.gz</code> file included in the replication
-package: - <code>asmeta-validation-tutorial.tar.gz</code></p>
+package:</p>
+<ul>
+<li><code>asmeta-validation-tutorial.tar.gz</code></li>
+</ul>
 <p>Load the Docker image (this may take a few minutes):</p>
 <pre><code>docker load -i asmeta-validation-tutorial.tar.gz</code></pre>
 <h3 id="step-2">Step 2</h3>
@@ -204,7 +211,7 @@ set the number of steps in the text box under the inscription
 <code>Insert random step number</code> to run automatically more than
 one step.</li>
 </ol>
-<p><img src="images/Animation.png" width="600"></p>
+<p><img src="images/Animation.png" width="550"></p>
 <p>Eventual invariant violation (e.g., from
 <code>S3_InvariantViolation.avalla</code>) and errors (e.g., from
 <code>S8_RandomScenario.avalla</code>) will appear in the
