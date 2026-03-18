@@ -1,190 +1,14 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>README</title>
-  <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    svg {
-      height: auto;
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #1a1a1a;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-</head>
-<body>
 <h1 id="artifact-guidelines">Artifact Guidelines</h1>
-<blockquote>
-<p><strong>NOTE</strong> This document contains the steps to be followed
-to reproduce the tutorial’s claims. This contains operative steps. To
-know more about the theory and the behavior, please read the tutorial
-paper.</p>
+<p>This document contains the steps to be followed to reproduce the
+tutorial’s claims. This contains operative steps. To know more about the
+theory and the behavior, please read the tutorial paper.</p>
 <p>Title of the original tutorial paper: <strong>“Scenario-Based Model
 Validation in Asmeta”</strong> submitted at the 27th International
 Symposium on Formal Methods (FM 2026) - Tutorial track.</p>
-</blockquote>
 <hr />
 <h2 id="index">Index</h2>
 <ul>
+<li><a href="#running-via-docker">Running via Docker</a></li>
 <li><a href="#software-installation">Software Installation</a>
 <ul>
 <li><a href="#windows">Windows</a></li>
@@ -197,29 +21,95 @@ Symposium on Formal Methods (FM 2026) - Tutorial track.</p>
 Coverage</a></li>
 <li><a href="#scenario-generation">Scenario Generation</a></li>
 </ul></li>
+<li><a href="#appendix-installing-java">Appendix: Installing
+Java</a></li>
 </ul>
 <hr />
+<h1 id="running-via-docker">Running via Docker</h1>
+<p>This section describes how to run the Docker container included in
+the replication package. If you prefer installing Asmeta locally on your
+machine, please refer to the <a href="#software-installation">Software
+Installation</a> section.</p>
+<blockquote>
+<p><strong>NOTE</strong> The provided Docker image is built for
+<strong>linux/amd64 architectures</strong>. It may not run natively on
+macOS with Apple Silicon (M1/M2/M3) unless Docker emulation for amd64
+images is enabled.</p>
+</blockquote>
+<hr />
+<p>Prerequisites:</p>
+<ul>
+<li>A CPU supporting linux/amd64 architecture</li>
+<li>Docker installed on your system
+(https://docs.docker.com/get-docker/)</li>
+</ul>
+<p>You can verify Docker installation with:</p>
+<p><code>docker --version</code></p>
+<hr />
+<h3 id="step-1">Step 1</h3>
+<p>Download the <code>.tar.gz</code> file included in the replication
+package:</p>
+<ul>
+<li><code>asmeta-validation-tutorial.tar.gz</code></li>
+</ul>
+<p>Load the Docker image (this may take a few minutes):</p>
+<pre><code>docker load -i asmeta-validation-tutorial.tar.gz</code></pre>
+<h3 id="step-2">Step 2</h3>
+<p>Run the Docker container with:</p>
+<pre><code>docker run -p 6080:6080 asmeta-validation-tutorial:v0.0.1</code></pre>
+<p>You can customize the <strong>scale</strong> and
+<strong>resolution</strong> using the <code>GDK_SCALE</code> and
+<code>VNC_GEOMETRY</code> environment variables. For example:</p>
+<pre><code>docker run -p 6080:6080 -e GDK_SCALE=3 -e VNC_GEOMETRY=3840x2400 asmeta-validation-tutorial:v0.0.1</code></pre>
+<h3 id="step-3">Step 3</h3>
+<ol type="1">
+<li>Open your browser and navigate to:
+<code>http://localhost:6080/vnc.html?resize=scale</code></li>
+<li>Connect to noVNC using the password: <code>asmeta</code></li>
+<li>Once connected, the Asmeta environment will start automatically and
+a <code>README.pdf</code> file will be opened inside the container</li>
+</ol>
+<p>You can follow the tutorial steps using the opened
+<code>README.pdf</code> or by following the instructions provided in the
+<a href="scenario-based-validation">Scenario-based Validation</a>
+section.</p>
+<p><strong>Note</strong>: In case the session is locked or in standby
+mode, use the password: <code>asmeta</code></p>
+<hr />
+<h3 id="stopping-and-removing-the-container">Stopping and Removing the
+Container</h3>
+<p>To stop the container, list running containers and copy the CONTAINER
+ID (or the auto-generated name):</p>
+<pre><code>docker ps
+docker stop &lt;CONTAINER_ID_OR_NAME&gt;</code></pre>
+<p>To remove it:</p>
+<pre><code>docker rm &lt;CONTAINER_ID_OR_NAME&gt;</code></pre>
+<p><strong>For frequent usage of Asmeta, a local installation is
+recommended as described in the next section.</strong></p>
 <h1 id="software-installation">Software Installation</h1>
-<p>This section describes how to install and configure the ASMETA
+<p>This section describes how to install and configure the Asmeta
 toolset included in this replication package.</p>
 <blockquote>
 <p><strong>NOTE</strong> Java is mandatory to run this tutorial. Please
-install Java (JDK &gt;= 21 recommended) if not already available.</p>
+install Java (JDK &gt;= 21 recommended) if not already available. You
+can follow the instruction in the <a
+href="#appendix-installing-java">Appendix</a> at the end of this
+document.</p>
 </blockquote>
 <h2 id="windows">Windows</h2>
-<h3 id="step-1">Step 1</h3>
+<h3 id="step-1-1">Step 1</h3>
 <p>Download the <code>.zip</code> file containing the Asmeta tool
 included in the replication package:</p>
 <ul>
 <li><code>eclipse_asmeta_smv_2026_02_win64.zip</code></li>
 </ul>
-<h3 id="step-2">Step 2</h3>
+<h3 id="step-2-1">Step 2</h3>
 <p>Unzip the content.</p>
 <p><strong>NOTE:</strong><br />
 The zip file contains Eclipse with all necessary plugins, the workspace
 with libraries and models for the tutorial, and the script to correctly
 set the environment and launch Eclipse with Asmeta.</p>
-<h3 id="step-3">Step 3</h3>
+<h3 id="step-3-1">Step 3</h3>
 <p>Run the <code>asmeta_win64.bat</code> file in the main folder.</p>
 <p>Eclipse is now running and in the workspace there are two
 projects:</p>
@@ -236,7 +126,7 @@ README in the <a href="https://github.com/asmeta/asmeta/">Asmeta GitHub
 Repository</a>.</p>
 <p>You can follow <strong>Step 1</strong> and <strong>Step 2</strong> as
 described for Windows (download and unzip the archive).</p>
-<h3 id="step-3-1">Step 3</h3>
+<h3 id="step-3-2">Step 3</h3>
 <p>Run the file in the main folder depending on your OS:</p>
 <ul>
 <li>Linux: <code>asmeta_linux64.sh</code></li>
@@ -277,6 +167,9 @@ to the latest version:</p>
 <p>After completing the update, restart Eclipse.</p>
 <hr />
 <h1 id="scenario-based-validation">Scenario-based Validation</h1>
+<p>Once Asmeta is correctly running, either the local installaion or
+within the Docker container, the basics of scenario-based validation on
+Asmeta can be replicated as follows:</p>
 <ol type="1">
 <li>Open the <code>S1_BasicStart.avalla</code> in the Eclipse
 editor.</li>
@@ -295,7 +188,7 @@ WARNING: validation incomplete - some checks failed or errors occurred</code></p
 <code>S3_InvariantViolation.avalla</code>. The console will report an
 invariant violation in addition to the <code>WARNING</code> message:
 <code>invariant violation found</code>.</p>
-<p>You can also run valiadtion for the scenarios with prefix from
+<p>You can also run validation for the scenarios with prefix from
 <code>S4_</code> to <code>S7_</code>.</p>
 <p><code>S8_RandomScenario.avalla</code> was obtained via random
 generation (see below). Therefore, since <code>Scheduler.asm</code>
@@ -318,7 +211,7 @@ set the number of steps in the text box under the inscription
 <code>Insert random step number</code> to run automatically more than
 one step.</li>
 </ol>
-<p><img src="images/Animation.png" width="600"></p>
+<p><img src="images/Animation.png" width="550"></p>
 <p>Eventual invariant violation (e.g., from
 <code>S3_InvariantViolation.avalla</code>) and errors (e.g., from
 <code>S8_RandomScenario.avalla</code>) will appear in the
@@ -386,5 +279,85 @@ Explorer window of the Eclipse editor.</li>
 <p><img src="images/scenarioGeneration.png" width="400"></p>
 <p>The resulting set of scenarios is generated in the
 <code>abstracttests</code> folder.</p>
-</body>
-</html>
+<hr />
+<h1 id="appendix-installing-java">Appendix: Installing Java</h1>
+<h2 id="windows-1">Windows</h2>
+<p>To quickly install Java on Windows, follow these three steps:</p>
+<ol type="1">
+<li><strong>Download the Installer</strong>: download the latest JDK
+(Java Development Kit) installer (MSI or .exe) from the <a
+href="https://www.oracle.com/java/technologies/downloads/#jdk25-windows">Oracle
+website</a>.</li>
+<li><strong>Run the installer</strong>: Double-click the downloaded .msi
+or .exe file to start the installation wizard. follow the on-screen
+prompts, and click “Close” when finished.</li>
+<li><strong>Verify the installation (optional)</strong>: Open Command
+Prompt (search for <code>cmd</code> in the Start menu) and type
+<code>java -version</code> to confirm that the installation was
+successful</li>
+</ol>
+<h2 id="macos">MacOS</h2>
+<p>To quickly install Java on Mac, follow these three steps:</p>
+<ol type="1">
+<li><strong>Download the Installer</strong>: Visit the official <a
+href="https://www.oracle.com/java/technologies/downloads/#jdk25-mac">Oracle
+website</a> and download the latest JDK (Java Development Kit) DMG
+installer. Choose the version based on your processor:
+<ul>
+<li>ARM64 DMG Installer: For Mac with Apple Silicon (M1/M2/M3
+chips).</li>
+<li>x64 DMG Installer: For Intel-based Macs.</li>
+</ul></li>
+<li><strong>Run the Installer</strong>: Open the downloaded .dmg file
+and double-click the .pkg file to launch the installation wizard. Follow
+the on-screen instructions, click <code>Install</code>, and enter your
+Mac’s password to grant permission.</li>
+<li><strong>Verify Installation (optional)</strong>: Open the Terminal
+(via Spotlight search), type <code>java -version</code>, and press Enter
+to confirm the installation.</li>
+</ol>
+<h2 id="linux---ubuntu">Linux - Ubuntu</h2>
+<p>To quickly install Java on Ubuntu, follow these three steps:</p>
+<ol type="1">
+<li>First verify that Java is not already inststalled</li>
+<li>Install the default JRE with <code>apt</code></li>
+<li>Run <code>java --version</code> on the command line to validate the
+install</li>
+</ol>
+<h3 id="check-for-existing-java-installs">1. Check for existing Java
+installs</h3>
+<p>You don’t need to setup Java on Ubuntu if someone has already
+installed it for you. A quick <code>java --version</code> check will
+tell you if an install is necessary. Open a terminal and check if java
+is not installed, by trying to execute <code>java</code>:</p>
+<pre><code>java -version
+Command &#39;java&#39; not found, but can be installed with:
+sudo apt install default-jre</code></pre>
+<p>If instaed, the command indicates the version, then Java is installed
+and you are done. Otherwise you have to install java by usign the apt
+commands</p>
+<h3 id="install-java-on-ubuntu-with-apt">2. Install Java on ubuntu with
+apt</h3>
+<p>The full Java suite includes the Java Runtime Environment (JRE), Java
+Virtual Machine (JVM) and utilities to develop Java source code. The
+Java Development Kit (JDK) provides everything a user needs to run Java
+applications. Install the JDK with the following command:</p>
+<pre><code>sudo apt install default-jre
+Setting up default-jdk-headless (2:1.21) ... 
+Setting up openjdk-21-jdk:amd64 (21.0.5+11-1ubuntu~24.04.1) ... 
+using /usr/lib/jvm/java-11-openjdk-amd64/bin/jconsole 
+Setting up default-jdk (2:1.21) ...</code></pre>
+<p>Note that it may necessary to execute sudo
+<code>apt-get update</code> ### 3. Verify Java is on the PATH</p>
+<p>To validate the successful install of Java on Ubuntu, and to ensure
+the JDK’s bin directory is accessible through the OS’s PATH variable,
+issue the following command:</p>
+<pre><code>java -version
+openjdk version &quot;21.0.5&quot; 2024-10-15
+OpenJDK Runtime Environment (21.0.5+11-1ubuntu~24.04.11)
+OpenJDK 64-Bit Server VM (21.0.5+11-1ubuntu~24.04.1, mixed mode, sharing)</code></pre>
+<p>If the <code>java -version</code> command outputs information about
+the version of Java installed, along with information about the JVM and
+runtime environment, then you successfully installed Java on Ubuntu with
+apt.</p>
+<hr />
