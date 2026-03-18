@@ -6,9 +6,9 @@ echo "location of the script $updatesite"
 OLD_ECL=eclipse_fresh
 
 # this part can be changed
-eclipsesubdir=2025-12/R/ 
-eclipsezip=eclipse-java-2025-12-R-win32-x86_64.zip
-zipname=eclipse_asmeta_smv_2026_02_win64.zip
+eclipsesubdir=2026-03/R/ 
+eclipsezip=eclipse-java-2026-03-R-win32-x86_64.zip
+zipname=eclipse_asmeta_smv_2026_03_win64.zip
 
 
 
@@ -94,9 +94,9 @@ make_zip(){
 mkdir -p temp
 pushd temp
 # personalize - comment/uncomment what you want
-#remove_old_eclipse
-#download_eclipse
+remove_old_eclipse
+download_eclipse
 # try to install the plugin
-#install_plugins
+install_plugins
 make_zip 
 popd
